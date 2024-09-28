@@ -10,6 +10,7 @@
     "available-typed-arrays": "^1.0.7",
     "aws-sdk": "^2.1691.0",
     "base64-js": "^1.5.1",
+    "bcrypt": "^5.1.1",
     "bl": "^6.0.16",
     "buffer": "^4.9.2",
     "call-bind": "^1.0.7",
