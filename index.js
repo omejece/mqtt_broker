@@ -44,7 +44,7 @@ aedes.authenticate = function (client, username, password, callback) {
     console.log(`Password: ${passwordStr}`);
   
     // Example authentication logic (always accept the connection)
-    if (username === 'validUser' && passwordStr === 'validPassword') {
+    if (username === 'omejece' && passwordStr === 'cceeoo33') {
       callback(null, true);  // Authentication successful
     } else {
       callback(null, false); // Authentication failed
