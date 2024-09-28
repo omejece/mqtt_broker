@@ -32,3 +32,21 @@ aedes.on('clientDisconnect', async function (client) {
     console.log(`Client disconnected: ${client.id}`);
     await ClientControl.deleteClient(client);
 });
+
+
+// Override the default authenticate method to capture login parameters
+aedes.authenticate = function (client, username, password, callback) {
+    console.log(`Client attempting to connect: ${client.id}`);
+    console.log(`Username: ${username}`);
+    
+    // Password is a Buffer, so convert it to string
+    const passwordStr = password ? password.toString() : null;
+    console.log(`Password: ${passwordStr}`);
+  
+    // Example authentication logic (always accept the connection)
+    if (username === 'validUser' && passwordStr === 'validPassword') {
+      callback(null, true);  // Authentication successful
+    } else {
+      callback(null, false); // Authentication failed
+    }
+};
