@@ -25,3 +25,8 @@ aedes.on("publish",async function(packet,client){
         console.log(`Client ${client.id} published to topic ${packet.topic}: ${packet.payload.toString()}`);
     }
 });
+
+aedes.on('clientDisconnect', async function (client) {
+    console.log(`Client disconnected: ${client.id}`);
+    await ClientControl.deleteClient(client);
+});
