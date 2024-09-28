@@ -24,10 +24,10 @@ async function loginClient(data){
         let params = {
             TableName:"clients",
             FilterExpression:"#username = :username",
-            AttributeExpressionNames:{
+            ExpressionAttributeNames:{
                "#username":"username"
             },
-            AttributeExpressionValues:{
+            ExpressionAttributeValues:{
                 ":username":data.username
             }
         };
