@@ -14,8 +14,6 @@ server.listen(4200,function(){
 aedes.on("client",async function(client){
      await ClientControl.saveClient(client);
      console.log(`Client connected: ${client.id}`);
-     console.log(Object.keys(client));
-     console.log(client.req);
 });
 
 aedes.on("subscribe",async function(subscription,client){
