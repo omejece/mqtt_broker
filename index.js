@@ -17,7 +17,7 @@ aedes.on("client",async function(client){
 });
 
 aedes.on("subscribe",async function(subscription,client){
-    console.log(`Client ${client.id} subscribed to topics: ${subscriptions.map(s => s.topic).join(', ')}`);
+    console.log(`Client ${client.id} subscribed to topics: ${subscription.map(s => s.topic).join(', ')}`);
 });
 
 aedes.on("publish",async function(packet,client){
